@@ -8,12 +8,14 @@ import java.util.Properties;
 public class StaticGenerator {
     public static void main(String[] args) {
         //获取项目的根路径
-        String outputPath = System.getProperty("user.dir");
-        System.out.println("=----=" + outputPath);
-        File parentFile = new File(outputPath).getParentFile();
+        String projectPath = System.getProperty("user.dir");
+        System.out.println("=----=" + projectPath);
+        File parentFile = new File(projectPath).getParentFile();
 
         String inputPath = new File(parentFile, "chao-generator-demo-projects/acm-template").getAbsolutePath();
         System.out.println("=----=" + inputPath);
+
+        String outputPath = projectPath;
         copyFilesByHutool(inputPath, outputPath);
 
     }
