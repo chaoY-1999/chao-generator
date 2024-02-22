@@ -4,10 +4,12 @@
   "basePackage": "com.chao",
   "version": "0.0.1",
   "author": "chao",
+  "gitAddress": "https://github.com/chaoY-1999/chao-generator/",
   "createTime": "2024-02-20",
   "fileConfig": {
-    "inputRootPath": "/Users/chao/chao/custom-project/chao-generator/chao-generator-demo-projects/acm-template-pro",
+    "inputRootPath": ".source/acm-template-pro",
     "outputRootPath": "generated",
+    "sourceRootPath": "/Users/chao/chao/custom-project/chao-generator/chao-generator-demo-projects/acm-template-pro",
     "type": "dir",
     "files": [
       {
