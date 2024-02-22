@@ -1,4 +1,4 @@
-package com.chao.maker.generator;
+package com.chao.maker.generator.main;
 
 import java.io.*;
 

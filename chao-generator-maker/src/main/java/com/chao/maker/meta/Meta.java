@@ -15,6 +15,7 @@ public class Meta {
     private String basePackage;
     private String version;
     private String author;
+    private String gitAddress;
     private String createTime;
     private FileConfig fileConfig;
     private ModelConfig modelConfig;
@@ -23,6 +24,7 @@ public class Meta {
     @Data
     public static class FileConfig {
         private String inputRootPath;
+        private String sourceRootPath;
         private String outputRootPath;
         private String type;
         private List<Files> files;

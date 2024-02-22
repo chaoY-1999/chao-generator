@@ -26,7 +26,7 @@ public class MetaManager {
     private static Meta initMeta() {
         String metaJson = ResourceUtil.readUtf8Str("meta.json");
         Meta newMeta = JSONUtil.toBean(metaJson, Meta.class);
-
+        MetaValidator.doValidAndFill(newMeta);
         Meta.FileConfig fileConfig = newMeta.getFileConfig();
         //TODO 校验和处理默认值
         return newMeta;
