@@ -1,6 +1,7 @@
 package com.chao.maker.meta;
 
 import cn.hutool.core.collection.CollectionUtil;
+import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.StrUtil;
 import com.chao.maker.meta.enums.FileGenerateTypeEnum;
@@ -9,8 +10,6 @@ import com.chao.maker.meta.enums.ModelTypeEnum;
 
 import java.io.File;
 import java.nio.file.Paths;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 /**
@@ -118,7 +117,7 @@ public class MetaValidator {
         String author = StrUtil.emptyToDefault(meta.getAuthor(), "chao");
         String basePackage = StrUtil.emptyToDefault(meta.getBasePackage(), "com.chao");
         String version = StrUtil.emptyToDefault(meta.getVersion(), "0.0.1");
-        String createTime = StrUtil.emptyToDefault(meta.getCreateTime(), LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
+        String createTime = String.format(DateUtil.now(), "yyyy-MM-dd HH:mm");
 
         meta.setName(name);
         meta.setVersion(version);
